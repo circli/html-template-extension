@@ -1,0 +1,33 @@
+{
+	"name": "circli/html-template-extension",
+	"description": "",
+	"type": "library",
+	"license": "MIT",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"authors": [
+		{
+			"name": "Andreas Sundqvist",
+			"email": "andreas@stefna.is"
+		}
+	],
+	"require": {
+		"php": "^8.0",
+		"payload-interop/payload-interop": "^1.0"
+	},
+	"require-dev": {
+		"stefna/codestyle": "^1.11",
+		"phpstan/phpstan": "^1.0",
+		"circli/web-core": "3.x-dev"
+	},
+	"autoload": {
+		"psr-4": {
+			"Circli\\HtmlTemplate\\": "src/"
+		}
+	},
+	"scripts": {
+		"check": "./vendor/bin/phpcs --standard=vendor/stefna/codestyle/library.xml src/",
+		"fix": "./vendor/bin/phpcbf --standard=vendor/stefna/codestyle/library.xml src/",
+		"stan": "phpstan analyse"
+	}
+}
