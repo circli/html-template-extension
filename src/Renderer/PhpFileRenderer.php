@@ -14,7 +14,7 @@ final class PhpFileRenderer implements RenderInterface
 	/**
 	 * @param null|callable(string): string $pathResolve
 	 */
-	public function __construct(string $templatePath, callable $pathResolve = null)
+	public function __construct(string $templatePath, callable|null $pathResolve = null)
 	{
 		$this->templatePath = rtrim($templatePath, DIRECTORY_SEPARATOR);
 		$this->pathResolve = $pathResolve ?? static fn (string $tpl) => $tpl;
